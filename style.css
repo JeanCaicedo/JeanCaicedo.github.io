@@ -1,85 +1,59 @@
-* {
-    box-sizing: border-box;
-}
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
 }
 
 header {
-    background-color: #444;
-    color: #fff;
-    padding: 40px 20px;
+    background-color: #252526;
+    padding: 2rem;
     text-align: center;
-    border-bottom: 3px solid #e8491d;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+h1, h2 {
+    color: #9cdcfe;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 section {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-}
-
-h2 {
-    color: #e8491d;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #e8491d;
-    padding-bottom: 5px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #2d2d2d;
+    border-left: 5px solid #569cd6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+    padding-left: 1.2rem;
 }
 
 ul li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+    margin-bottom: 0.5rem;
 }
 
-ul li::before {
-    content: "•";
-    color: #e8491d;
-    position: absolute;
-    left: 0;
+a {
+    color: #569cd6;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #9cdcfe;
 }
 
 footer {
+    background-color: #252526;
     text-align: center;
-    padding: 15px 10px;
-    background-color: #444;
-    color: #fff;
+    padding: 1rem;
     position: fixed;
-    width: 100%;
     bottom: 0;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    header {
-        padding: 30px 10px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    section {
-        margin: 15px;
-        padding: 15px;
-    }
+    width: 100%;
+    color: #cccccc; 
 }
