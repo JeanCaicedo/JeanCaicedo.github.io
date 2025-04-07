@@ -3,6 +3,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: #1e1e1e;
   color: #d4d4d4;
+  padding-bottom: 100px; /* espacio para que el footer no tape nada */
 }
 
 header {
