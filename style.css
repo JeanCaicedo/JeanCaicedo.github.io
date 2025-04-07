@@ -1,58 +1,106 @@
-body {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  padding-bottom: 100px; /* espacio para que el footer no tape nada */
-}
-
-header {
-  background-color: #252526;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1,
-h2 {
-  color: #9cdcfe;
-}
-
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: #2d2d2d;
-  border-left: 5px solid #569cd6;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-a {
-  color: #569cd6;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #9cdcfe;
-}
-
-footer {
-  background-color: #252526;
-  text-align: center;
-  padding: 1rem;
-  color: #cccccc;
-  margin-top: 2rem;
-}
+/* === Reset and Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #cccccc;
+    line-height: 1.6;
+    padding: 0 2rem;
+  }
+  
+  /* === Header === */
+  .nav {
+    background: #121212;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav a {
+    color: #66ccff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #ffffff;
+  }
+  
+  /* === Sections === */
+  .section {
+    padding: 4rem 0;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .section h2 {
+    color: #66ccff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #66ccff;
+    padding-left: 1rem;
+  }
+  
+  .section ul {
+    padding-left: 1.5rem;
+  }
+  
+  .section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* === Intro === */
+  .intro h1 {
+    font-size: 2.5rem;
+    color: #66ccff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .intro p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  /* === Footer === */
+  footer {
+    background-color: #252526;
+    text-align: center;
+    padding: 1rem;
+    color: #cccccc;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 600px) {
+    .nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .intro h1 {
+      font-size: 2rem;
+    }
+  
+    .section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
