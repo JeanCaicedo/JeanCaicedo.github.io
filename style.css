@@ -1,7 +1,12 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: radial-gradient(circle at 30% 30%, #0f172a, #0a0f1f);
+  background-color: #0f172a;
+  background-image: radial-gradient(
+    circle at 30% 30%,
+    rgba(56, 189, 248, 0.1),
+    rgba(15, 23, 42, 1) 60%
+  );
   color: #cbd5e1;
   display: flex;
   min-height: 100vh;
