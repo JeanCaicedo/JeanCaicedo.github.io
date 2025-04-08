@@ -1,17 +1,10 @@
-// script.js
-// Aquí puedes añadir interacciones si deseas
 
-// Ejemplo: animación al hacer scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(sec => {
-      const top = window.scrollY;
-      const offset = sec.offsetTop - 150;
-      const height = sec.offsetHeight;
-      if (top >= offset && top < offset + height) {
-        sec.style.opacity = 1;
-        sec.style.transform = 'translateY(0)';
-      }
+// Animación suave al hacer scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      target?.scrollIntoView({ behavior: "smooth" });
     });
   });
   
