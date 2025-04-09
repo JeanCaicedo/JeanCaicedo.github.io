@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-body {
+/* Fuente e inicialización */
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: 'Inter', sans-serif;
   color: #ffffff;
+  overflow-x: hidden;
   background-color: transparent;
 }
 
+/* Video de fondo */
 #bg-video {
   position: fixed;
   top: 0;
@@ -18,27 +20,29 @@ body {
   z-index: -1;
 }
 
+/* Layout general */
 .main-container {
   display: flex;
   min-height: 100vh;
-  background-color: transparent;
-  z-index: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
+/* Sidebar sin fondo */
 .sidebar {
   width: 280px;
   padding: 2rem;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  background-color: transparent;
-  z-index: 1;
+  z-index: 2;
 }
 
 .sidebar h1 {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar h2 {
@@ -60,11 +64,31 @@ body {
   color: #63b3ed;
 }
 
+/* Iconos sociales desde carpeta local */
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+
+/* Contenido principal */
 .content {
   flex: 1;
   padding: 2rem;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
 }
 
 section {
@@ -78,4 +102,9 @@ h2 {
 
 ul {
   padding-left: 1.5rem;
+}
+
+a {
+  color: #63b3ed;
+  text-decoration: underline;
 }
