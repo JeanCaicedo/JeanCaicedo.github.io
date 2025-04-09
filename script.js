@@ -1,10 +1,7 @@
+// Efecto de resplandor suave que sigue al cursor
+const cursorGlow = document.getElementById("cursor-glow");
 
-// Animación suave al hacer scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      target?.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-  
+document.addEventListener("mousemove", (e) => {
+  cursorGlow.style.left = `${e.clientX}px`;
+  cursorGlow.style.top = `${e.clientY}px`;
+});
