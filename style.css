@@ -54,16 +54,18 @@ body {
   z-index: 0;
 }
 
+/* Opcional: Si tu contenedor (.container) afecta el layout, podrías modificarlo o removerlo */
 .container {
-  display: flex;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+  display: block;
 }
 
-/* Sidebar */
+/* Sidebar fijo */
 .sidebar {
-  width: 25%;
+  position: fixed; /* La fija en pantalla */
+  top: 0;
+  left: 0;
+  width: 25%; /* Ancho fijo para la sidebar */
+  height: 100vh; /* Toma el alto completo de la ventana */
   padding: 2rem;
   background-color: transparent;
   display: flex;
@@ -122,12 +124,12 @@ body {
   filter: brightness(1.4);
 }
 
-/* Contenido principal */
+/* Ajustamos el contenido para que no quede tapado por la sidebar */
 .content {
-  width: 75%;
+  margin-left: 25%; /* Desplaza el contenido a la derecha */
   padding: 3rem;
-  background-color: transparent;
-  backdrop-filter: none;
+  height: 100vh; /* Altura total de la ventana */
+  overflow-y: auto; /* Permite scroll solo en esta sección */
 }
 
 .content section {
