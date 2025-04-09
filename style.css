@@ -128,8 +128,11 @@ body {
 .content {
   margin-left: 25%; /* Desplaza el contenido a la derecha */
   padding: 3rem;
-  height: 100vh; /* Altura total de la ventana */
-  overflow-y: auto; /* Permite scroll solo en esta sección */
+  min-height: 100vh; /* Permite que el contenido llene la ventana si es corto */
+  /* Se eliminan estas propiedades para que no tenga scroll interno:
+  height: 100vh;
+  overflow-y: auto;
+  */
 }
 
 .content section {
