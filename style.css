@@ -6,12 +6,11 @@
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  object-position: center; /* Centra el video */
   z-index: -2;
-  opacity: 1; /* Sin transparencia */
+  opacity: 0.3;
 }
 
-/* Capa oscura para contraste 
+/* Capa oscura para contraste */
 .overlay {
   position: fixed;
   top: 0;
@@ -21,7 +20,6 @@
   background-color: rgba(15, 23, 42, 0.5);
   z-index: -1;
 }
-*/
 
 /* Efecto glow del cursor */
 #cursor-glow {
@@ -30,11 +28,7 @@
   left: 0;
   width: 300px;
   height: 300px;
-  background: radial-gradient(
-    circle,
-    rgba(56, 189, 248, 0.15) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, rgba(0,0,0,0) 60%);
   pointer-events: none;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -54,20 +48,18 @@ body {
   z-index: 0;
 }
 
-/* Opcional: Si tu contenedor (.container) afecta el layout, podrías modificarlo o removerlo */
 .container {
-  display: block;
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-/* Sidebar fijo */
+/* Sidebar */
 .sidebar {
-  position: fixed; /* La fija en pantalla */
-  top: 0;
-  left: 0;
-  width: 25%; /* Ancho fijo para la sidebar */
-  height: 100vh; /* Toma el alto completo de la ventana */
+  width: 25%;
   padding: 2rem;
-  background-color: transparent;
+  background-color: rgba(15, 23, 42, 0.85);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -124,15 +116,12 @@ body {
   filter: brightness(1.4);
 }
 
-/* Ajustamos el contenido para que no quede tapado por la sidebar */
+/* Contenido principal */
 .content {
-  margin-left: 25%; /* Desplaza el contenido a la derecha */
+  width: 75%;
   padding: 3rem;
-  min-height: 100vh; /* Permite que el contenido llene la ventana si es corto */
-  /* Se eliminan estas propiedades para que no tenga scroll interno:
-  height: 100vh;
-  overflow-y: auto;
-  */
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(5px);
 }
 
 .content section {
