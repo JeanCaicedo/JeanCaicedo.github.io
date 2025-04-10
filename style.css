@@ -65,7 +65,7 @@ html {
   color: #63b3ed;
 }
 
-/* Iconos sociales desde carpeta local */
+/* Iconos sociales */
 .social-icons {
   position: fixed;
   bottom: 20px;
@@ -107,7 +107,19 @@ ul {
   padding-left: 1.5rem;
 }
 
+/* Hipervínculos */
 a {
   color: #63b3ed;
   text-decoration: underline;
+}
+
+/* Espaciado entre párrafos */
+p {
+  margin-bottom: 20px;
+}
+
+/* Espaciado entre elementos de lista (opcional) */
+ul li {
+  margin-bottom: 20px;
+  line-height: 1.6; /* Para una lectura más cómoda */
 }
