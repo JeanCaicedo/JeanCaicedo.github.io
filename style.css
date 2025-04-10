@@ -1,9 +1,10 @@
 /* Fuente e inicialización */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #ffffff;
   overflow-x: hidden;
   background-color: transparent;
@@ -66,10 +67,12 @@ body, html {
 
 /* Iconos sociales desde carpeta local */
 .social-icons {
-  margin-top: 2rem;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
+  z-index: 1000;
 }
 
 .social-icon {
