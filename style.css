@@ -123,3 +123,45 @@ ul li {
   margin-bottom: 20px;
   line-height: 1.6; /* Para una lectura más cómoda */
 }
+
+/* Media Queries para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  /* Hace que el contenedor principal se organice en columnas */
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* La sidebar ocupa el ancho completo y centra su contenido */
+  .sidebar {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Ajusta el tamaño y separación de los enlaces del menú */
+  .sidebar nav a {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* El contenido principal se adapta al ancho completo */
+  .content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Reubica los iconos sociales al centro de la parte inferior */
+  .social-icons {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.75rem;
+  }
+
+  /* Ajuste opcional de la tipografía para mejorar la lectura */
+  body,
+  html {
+    font-size: 16px;
+  }
+}
