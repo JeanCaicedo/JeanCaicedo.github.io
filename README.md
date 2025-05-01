@@ -25,15 +25,7 @@ Este es el sitio web personal que desarrollé para mostrar mis habilidades y exp
 
 La intención de este sitio web es demostrar mi capacidad para desarrollar interfaces modernas y responsivas, mostrando mi proceso de aprendizaje y la aplicación práctica de tecnologías actuales. Es un reflejo de mi entusiasmo por el desarrollo de software y mi compromiso con la mejora continua.
 
-## Cómo Ejecutar el Proyecto
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   ```
-2. Abre el proyecto en tu editor de código favorito (por ejemplo, Visual Studio Code).
-3. Para ver la página, abre el archivo `index.html` en tu navegador.  
-   *(Opcional: Utiliza una extensión de live server para una vista en tiempo real.)*
 
 ## Contacto
 
