@@ -1,0 +1,395 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-light dark:bg-dark text-text-dark dark:text-text-light;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg transition-all duration-300 ease-in-out font-medium
+           shadow-lg hover:shadow-xl active:shadow-md
+           transform hover:-translate-y-1 active:translate-y-0;
+  }
+  
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-600 dark:to-blue-800
+           text-white hover:from-blue-600 hover:to-blue-800 dark:hover:from-blue-700 dark:hover:to-blue-900
+           shadow-blue-500/20 hover:shadow-blue-500/30 border-0;
+  }
+
+  .btn-secondary {
+    @apply btn bg-light-card dark:bg-dark-card
+           text-text-dark dark:text-text-light
+           hover:bg-light-darker/50 dark:hover:bg-dark-lighter/50;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-6 text-primary dark:text-blue-400 drop-shadow-lg;
+  }
+  
+  .card {
+    @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-xl p-8
+           shadow-xl border border-light-darker/10 dark:border-white/5
+           transition-all duration-300;
+  }
+  
+  .skill-tag {
+    @apply inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium 
+           bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300 
+           border border-primary/20 m-1 transition-all duration-300
+           hover:bg-primary/20 dark:hover:bg-primary/30
+           hover:scale-105 cursor-default;
+  }
+
+  .form-group {
+    @apply relative mb-6;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium mb-2 
+           text-gray-700 dark:text-gray-300
+           transition-all duration-300
+           tracking-wide;
+  }
+
+  .form-input-wrapper {
+    @apply relative;
+  }
+
+  .form-input {
+    @apply w-full px-5 py-4 rounded-xl
+           bg-white/5 dark:bg-black/5
+           backdrop-blur-sm
+           border-2 border-white/20 dark:border-white/10
+           text-gray-800 dark:text-gray-100
+           placeholder-gray-500/50 dark:placeholder-gray-400/50
+           transition-all duration-300
+           focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+           hover:border-white/30 dark:hover:border-white/20
+           shadow-inner shadow-black/5;
+  }
+
+  .form-input:focus + .form-input-icon {
+    @apply text-primary transform scale-110;
+  }
+
+  .form-textarea {
+    @apply form-input resize-none min-h-[150px]
+           leading-relaxed;
+  }
+
+  .form-input-icon {
+    @apply absolute right-4 top-1/2 -translate-y-1/2
+           text-gray-400 dark:text-gray-500
+           transition-all duration-300
+           pointer-events-none;
+  }
+
+  .form-submit-wrapper {
+    @apply relative mt-8;
+  }
+
+  .form-submit-button {
+    @apply w-full flex items-center justify-center gap-3
+           bg-gradient-to-r from-blue-500 to-blue-700
+           hover:from-blue-600 hover:to-blue-800
+           text-white font-semibold
+           py-4 px-8 rounded-xl
+           transition-all duration-300
+           shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30
+           transform hover:-translate-y-1
+           border-0
+           relative overflow-hidden
+           before:absolute before:inset-0
+           before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+           before:translate-x-[-200%] hover:before:translate-x-[200%]
+           before:transition-transform before:duration-1000;
+  }
+
+  .form-submit-icon {
+    @apply w-5 h-5 transition-transform duration-300 group-hover:rotate-12;
+  }
+
+  .input-highlight {
+    @apply absolute inset-0 border-2 border-transparent rounded-xl
+           transition-all duration-300 pointer-events-none
+           group-focus-within:border-primary/50 group-focus-within:shadow-lg
+           group-focus-within:shadow-primary/20;
+  }
+
+  /* Animación de carga del botón */
+  .loading {
+    @apply relative cursor-wait;
+  }
+
+  .loading::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700
+           animate-pulse rounded-xl;
+  }
+
+  /* Efectos de éxito/error */
+  .success {
+    @apply border-green-500/50 bg-green-500/10;
+  }
+
+  .error {
+    @apply border-red-500/50 bg-red-500/10;
+  }
+
+  .contact-section {
+    @apply relative overflow-hidden;
+  }
+
+  .contact-container {
+    @apply relative z-10 max-w-4xl mx-auto;
+  }
+
+  .contact-form {
+    @apply bg-white/10 dark:bg-dark-lighter/10 
+           backdrop-blur-xl rounded-2xl
+           shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)]
+           border border-white/20 dark:border-white/10
+           p-8 md:p-10;
+  }
+
+  .nav-link {
+    @apply relative text-text-dark dark:text-text-light 
+           hover:text-primary dark:hover:text-primary transition-all
+           after:absolute after:bottom-0 after:left-0 after:right-0
+           after:h-0.5 after:bg-primary after:transform after:scale-x-0
+           after:transition-transform after:duration-300
+           hover:after:scale-x-100 font-medium;
+  }
+
+  .clickable {
+    @apply cursor-pointer hover:text-primary transition-colors duration-300
+           relative after:absolute after:bottom-0 after:left-0 after:right-0
+           after:h-0.5 after:bg-primary/50 after:transform after:scale-x-0
+           after:transition-transform after:duration-300
+           hover:after:scale-x-100;
+  }
+
+    .project-card {    
+      @apply bg-white/10 dark:bg-black/20
+             backdrop-blur-xl rounded-xl
+             border border-white/20 dark:border-white/10
+             overflow-hidden
+             transition-all duration-300
+             hover:shadow-xl hover:shadow-primary/20
+             hover:border-primary/20
+             hover:bg-white/20 dark:hover:bg-black/30
+             p-6;
+    }
+
+  .project-card img {
+    @apply filter brightness-95 contrast-105 hover:brightness-100 hover:contrast-110
+           transition-all duration-500
+           shadow-md;
+  }
+
+  .project-card .skill-tag {
+    @apply text-xs py-1 px-3
+           bg-primary/15 dark:bg-primary/25
+           text-primary/90 dark:text-primary
+           border border-primary/20 dark:border-primary/30
+           shadow-sm;
+  }
+
+  .project-card h3 {
+    @apply text-text-dark dark:text-text-light
+           font-semibold text-xl
+           mb-2;
+  }
+
+  .project-card p {
+    @apply text-text-dark/90 dark:text-text-light/90
+           text-sm leading-relaxed;
+  }
+
+  .skill-category-card {
+    @apply bg-white/5 dark:bg-black/5
+           backdrop-blur-xl rounded-xl
+           border border-white/10 dark:border-white/5
+           p-6
+           transition-all duration-300
+           hover:shadow-xl hover:shadow-primary/10
+           hover:border-primary/20;
+  }
+
+  .skill-category-header {
+    @apply flex items-center gap-4 mb-6;
+  }
+
+  .skill-list {
+    @apply space-y-4;
+  }
+
+  .skill-item {
+    @apply space-y-2;
+  }
+
+  .skill-name {
+    @apply text-sm font-medium text-text-dark dark:text-text-light;
+  }
+
+  .skill-bar {
+    @apply h-2 bg-white/10 dark:bg-black/20 rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-blue-500 to-blue-700
+           rounded-full
+           relative
+           animate-[skillProgress_1s_ease-out];
+  }
+
+  @keyframes skillProgress {
+    from { width: 0; }
+    to { width: var(--width, 100%); }
+  }
+
+  .contact-info-card {
+    @apply bg-white/5 dark:bg-black/5
+           backdrop-blur-xl rounded-xl
+           border border-white/10 dark:border-white/5
+           p-6 md:p-8
+           transition-all duration-300
+           hover:border-primary/20;
+  }
+
+  .contact-icon-wrapper {
+    @apply w-12 h-12 rounded-xl
+           bg-gradient-to-br from-blue-500/10 to-purple-500/10
+           flex items-center justify-center
+           text-primary;
+  }
+
+  .social-icon-link {
+    @apply w-10 h-10 rounded-lg
+           bg-white/5 dark:bg-black/5
+           flex items-center justify-center
+           text-text-dark dark:text-text-light
+           hover:text-primary dark:hover:text-primary
+           hover:bg-white/10 dark:hover:bg-black/10
+           transition-all duration-300
+           border border-white/10 dark:border-white/5;
+  }
+
+  .contact-form-new {
+    @apply bg-white/5 dark:bg-black/5
+           backdrop-blur-xl rounded-xl
+           border border-white/10 dark:border-white/5
+           p-6 md:p-8
+           transition-all duration-300
+           focus-within:border-primary/20;
+  }
+
+  .form-field {
+    @apply relative;
+  }
+
+  .contact-input {
+    @apply w-full bg-transparent
+           border-none outline-none
+           py-3 px-0
+           text-text-dark dark:text-text-light
+           placeholder-transparent
+           transition-all duration-300
+           focus:ring-0 focus:outline-none;
+  }
+
+  .contact-label {
+    @apply absolute left-0 -top-3.5
+           text-sm text-text-dark/60 dark:text-text-light/60
+           transition-all duration-300
+           peer-placeholder-shown:text-base
+           peer-placeholder-shown:text-text-dark/40 dark:peer-placeholder-shown:text-text-light/40
+           peer-placeholder-shown:top-3
+           peer-focus:-top-3.5
+           peer-focus:text-sm
+           peer-focus:text-primary;
+  }
+
+  .contact-input-line {
+    @apply absolute bottom-0 left-0 right-0
+           h-0.5 bg-white/20 dark:bg-white/10
+           overflow-hidden
+           before:absolute before:left-1/2 before:right-1/2
+           before:bottom-0 before:h-0.5
+           before:bg-primary/50
+           before:transition-all before:duration-300
+           peer-focus:before:left-0 peer-focus:before:right-0;
+  }
+
+  .contact-submit-btn {
+    @apply relative w-full
+           py-4 px-8
+           text-white font-medium
+           rounded-xl
+           overflow-hidden
+           transition-all duration-500
+           hover:shadow-lg hover:shadow-primary/20
+           active:scale-[0.98]
+           focus:outline-none focus:ring-0;
+  }
+
+  .contact-btn-bg {
+    @apply absolute inset-0
+           bg-gradient-to-r from-blue-500 to-blue-700
+           transition-transform duration-500
+           hover:scale-105;
+  }
+
+  textarea.contact-input {
+    @apply resize-none min-h-[120px]
+           focus:ring-0 focus:outline-none;
+  }
+}
+
+/* Estilos personalizados */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r 
+         from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600 
+         animate-gradient font-extrabold;
+}
+
+.glass-morphism {
+  @apply bg-white/90 dark:bg-dark-card/90 backdrop-blur-md 
+         border border-white/20 rounded-xl;
+}
+
+.scroll-indicator {
+  @apply fixed top-0 left-0 h-1 bg-primary shadow-lg 
+         shadow-primary/50 transition-all duration-300;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Mejoras de contraste para texto */
+.text-content {
+  @apply text-text-dark/90 dark:text-text-light/90 leading-relaxed;
+}
+
+.text-muted {
+  @apply text-text-muted dark:text-text-light/70;
+}
+
+/* Efecto de elevación para elementos interactivos */
+.hover-elevate {
+  @apply transition-all duration-300
+         hover:transform hover:-translate-y-1
+         hover:shadow-lg;
+} 
