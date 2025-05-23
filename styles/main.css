@@ -49,16 +49,19 @@
   }
   
   .card {
-    @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-xl p-8
+    @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-2xl p-8
            shadow-xl border border-light-darker/10 dark:border-white/5
            transition-all duration-500 ease-out
            hover:bg-light-card/90 dark:hover:bg-dark-card/90
+           hover:shadow-2xl hover:shadow-black/5 dark:hover:shadow-black/20
+           hover:border-primary/20
+           hover:-translate-y-2
            relative overflow-hidden;
   }
   
   .card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent
+    @apply absolute inset-0 bg-gradient-to-br from-primary/3 via-primary/1 to-transparent
            opacity-0 transition-opacity duration-500;
   }
   
@@ -151,7 +154,6 @@
            group-focus-within:shadow-primary/20;
   }
 
-  /* Animación de carga del botón */
   .loading {
     @apply relative cursor-wait;
   }
@@ -162,7 +164,6 @@
            animate-pulse rounded-xl;
   }
 
-  /* Efectos de éxito/error */
   .success {
     @apply border-green-500/50 bg-green-500/10;
   }
@@ -386,7 +387,6 @@
   }
 }
 
-/* Estilos personalizados */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r 
          from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600 
@@ -405,7 +405,6 @@
          shadow-lg shadow-primary/50 transition-all duration-300 z-50;
 }
 
-/* Animaciones mejoradas */
 @keyframes fadeIn {
   from { 
     opacity: 0; 
@@ -459,7 +458,6 @@
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* Mejoras de contraste para texto */
 .text-content {
   @apply text-text-dark/90 dark:text-text-light/90 leading-relaxed;
 }
@@ -468,14 +466,12 @@
   @apply text-text-muted dark:text-text-light/70;
 }
 
-/* Efecto de elevación para elementos interactivos */
 .hover-elevate {
   @apply transition-all duration-300
          hover:transform hover:-translate-y-1
          hover:shadow-lg;
 }
 
-/* Mejoras para dispositivos móviles */
 @media (max-width: 768px) {
   .btn {
     @apply px-4 py-2 text-sm;
@@ -490,13 +486,11 @@
   }
 }
 
-/* Mejoras de rendimiento */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scrollbar personalizado */
 ::-webkit-scrollbar {
   width: 8px;
 }
