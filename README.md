@@ -30,7 +30,7 @@ La intención de este sitio web es demostrar mi capacidad para desarrollar inter
 ## Contacto
 
 Si deseas comunicarte conmigo, puedes hacerlo a través de:
-- **Email:** julioiancarlos780@gmail.com
+- **Email:** juliojeancarlos780@gmail.com
 - **Teléfono:** 312-2968-092
 - **Redes Sociales:** [GitHub](https://github.com/JeanCaicedo) | [LinkedIn](https://www.linkedin.com/in/justjeanz/) | [Instagram](https://www.instagram.com/jeanncaicedo/) | [Twitter](https://x.com/JeanYagamis)
 
