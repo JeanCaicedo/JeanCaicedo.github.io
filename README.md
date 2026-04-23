@@ -1,39 +1,70 @@
-# Portafolio de Jean Carlos Julio Caicedo
+# Portafolio — Jean Caicedo
 
-Este es el sitio web personal que desarrollé para mostrar mis habilidades y experiencia en desarrollo de software. La página se centra en resaltar mi pasión por la tecnología, mi formación y mi capacidad para aprender y crecer profesionalmente.
+Sitio web personal de portafolio desarrollado para mostrar mi perfil como desarrollador Full Stack: formación, habilidades, proyectos y una vía directa de contacto. El sitio está desplegado en GitHub Pages en [jeancaicedo.github.io](https://jeancaicedo.github.io/).
 
-## Características
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![EmailJS](https://img.shields.io/badge/EmailJS-0F6FFF?style=for-the-badge&logo=minutemailer&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white)
 
-- **Diseño limpio y moderno:** Utilicé HTML5 y CSS3 para construir una interfaz sencilla y responsiva.
-- **Fondo en video:** Se utiliza un video (fondo.mp4) a pantalla completa que sirve como fondo de la página, proporcionando un ambiente visual atractivo.
-- **Secciones informativas:** 
-  - **Sobre mí:** Una descripción de mi pasión por el desarrollo de software y mi compromiso con el aprendizaje continuo.
-  - **Educación:** Información sobre mi formación a través de plataformas como Platzi, Udemy, y mi experiencia universitaria.
-  - **Habilidades:** Detalle de mis conocimientos en distintos lenguajes, frameworks, bases de datos y metodologías ágiles.
-  - **Contacto:** Información de contacto para que puedas comunicarte conmigo directamente.
-- **Enlaces a redes sociales:** Acceso rápido a mis perfiles de GitHub, LinkedIn, Instagram y Twitter para ver mis proyectos y conectar profesionalmente.
+## Secciones
 
-## Herramientas y Tecnologías
+- Sobre mí
+- Educación y certificaciones (Platzi, Udemy, formación universitaria)
+- Habilidades y tecnologías
+- Proyectos destacados
+- Formulario de contacto integrado con EmailJS
 
-- **HTML5 y CSS3:** Para estructurar y estilizar la página.
-- **Video en HTML5:** Se implementa para el fondo dinámico de la web.
-- **Media Queries:** Aseguran que la página sea responsiva y se vea correctamente en dispositivos móviles.
-- **Visual Studio Code:** IDE usado para el desarrollo.
-- **Prettier:** Utilizado para mantener un formato de código consistente y limpio.
+## Stack
 
-## Propósito
+- **HTML5** y **CSS3** como base de la estructura y estilos.
+- **Tailwind CSS** para estilos utility-first, con `tailwind.config.js` personalizado.
+- **JavaScript** vanilla para interactividad y lógica del sitio.
+- **Framer Motion** para animaciones fluidas en la interfaz.
+- **EmailJS** (`@emailjs/browser`) para el envío del formulario de contacto sin backend propio.
+- Modo oscuro, diseño responsive y fondo en video (`images/fondo.mp4`) a pantalla completa.
 
-La intención de este sitio web es demostrar mi capacidad para desarrollar interfaces modernas y responsivas, mostrando mi proceso de aprendizaje y la aplicación práctica de tecnologías actuales. Es un reflejo de mi entusiasmo por el desarrollo de software y mi compromiso con la mejora continua.
+## Deploy
 
+Sitio en vivo: <https://jeancaicedo.github.io/>
 
+Despliegue automático desde la rama `main` mediante GitHub Pages.
+
+## Desarrollo local
+
+```bash
+git clone https://github.com/JeanCaicedo/JeanCaicedo.github.io.git
+cd JeanCaicedo.github.io
+npm install
+# Abrir index.html directamente en el navegador
+# o servirlo con Live Server / cualquier servidor estático.
+```
+
+> Nota: las claves de EmailJS se leen desde metaetiquetas en `index.html`
+> (`emailjs-public-key`, `emailjs-service-id`, `emailjs-template-id`).
+
+## Estructura del proyecto
+
+```
+JeanCaicedo.github.io/
+├── images/             # Recursos gráficos (icono, fondo.mp4, capturas)
+├── styles/             # Hojas de estilo (main.css)
+├── index.html          # Página principal
+├── script.js           # Lógica e interacciones
+├── style.css           # Estilos adicionales
+├── tailwind.config.js  # Configuración de Tailwind
+├── package.json        # Dependencias (Tailwind, Framer Motion, EmailJS)
+└── README.md
+```
 
 ## Contacto
 
-Si deseas comunicarte conmigo, puedes hacerlo a través de:
 - **Email:** juliojeancarlos780@gmail.com
-- **Teléfono:** 312-2968-092
-- **Redes Sociales:** [GitHub](https://github.com/JeanCaicedo) | [LinkedIn](https://www.linkedin.com/in/justjeanz/) | [Instagram](https://www.instagram.com/jeanncaicedo/) | [Twitter](https://x.com/JeanYagamis)
+- **GitHub:** [JeanCaicedo](https://github.com/JeanCaicedo)
+- **LinkedIn:** [jeanncaicedo](https://www.linkedin.com/in/jeanncaicedo/)
 
----
+## Autor
 
-¡Gracias por visitar mi portafolio y espero que este proyecto refleje mi compromiso y pasión por el desarrollo de software!
+Jean Caicedo — [@JeanCaicedo](https://github.com/JeanCaicedo)
+LinkedIn: [jeanncaicedo](https://www.linkedin.com/in/jeanncaicedo/)
